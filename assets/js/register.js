@@ -7,13 +7,12 @@ function register() {
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
 
+    // Retrieve or initialize loginStorage
     let loginStorage = window.localStorage.getItem('loginStorage')
     if (!loginStorage) {
         loginStorage = {}
     } else {
         loginStorage = JSON.parse(loginStorage)
-        alert("Registration successful!")
-        window.location = "index.html"
     }
 
     // if (loginStorage[username]) {
@@ -23,5 +22,7 @@ function register() {
         loginStorage[username] = {}
         loginStorage[username]['password'] = password
         window.localStorage.setItem('loginStorage', JSON.stringify(loginStorage))
+        alert("Registration successful!")
+        window.location = "index.html"
     }
 }
