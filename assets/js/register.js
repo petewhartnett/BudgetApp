@@ -12,6 +12,8 @@ function register() {
         loginStorage = {}
     } else {
         loginStorage = JSON.parse(loginStorage)
+        alert("Registration successful!")
+        window.location = "index.html"
     }
 
     // if (loginStorage[username]) {

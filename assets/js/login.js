@@ -23,7 +23,7 @@ function validate() {
 
     if (loginStorage[username] && password === loginStorage[username]['password']) {
         alert("Login successfully")
-        window.location = "success.html"
+        window.location = "home.html"
         return false;
     } else {
         alert("Invalid Login");
