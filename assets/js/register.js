@@ -15,7 +15,6 @@ function register() {
         loginStorage = JSON.parse(loginStorage)
     }
 
-    // if (loginStorage[username]) {
     if (username in loginStorage) {
         alert(`User ${username} already has an account.`)
     } else {
