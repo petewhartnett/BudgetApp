@@ -3357,3 +3357,93 @@ input, select, textarea {
 			}
 
 	}
+
+
+	.income,
+	.costs {
+		display: none;
+		width: 300px;
+	}
+	
+	.container-chart {
+			width: 40%;
+			height: 40%;
+		}
+	
+	.start {
+	
+	   width: 300px;
+	}
+	
+	.calculate {
+		margin: 10px 0px;
+		display: block;
+	}
+	
+	* {
+		font-family: Arial;
+	}
+	
+	.add-cost,.calculate,.add-income,.start, .add-costs {
+		border: 1px;
+		padding: 4px 1px;
+		display: block;
+		border-radius: 7px;
+		text-align: center;
+		text-decoration: none;
+		margin-top: 1px;
+		background: #37c0fb;
+		color: white
+	}
+	
+	.additional-income,
+	.additional-costs {
+		padding: 3px 20px;
+	}
+	
+	label {
+		width: 70px;
+		display: inline-block;
+		box-sizing: border-box;
+		font-size: 12px;
+		margin: 0px;
+	}
+	
+	input {
+		margin: 4px 4px 0px 0px;
+		padding: 2px;
+		box-sizing: border-box;
+		width: 150px;
+		display: inline-block;
+	}
+	
+	span {
+		display: inline-block;
+		width: 50px;
+		margin-left: 8px;
+		font-size: 10px;
+		cursor: pointer;
+	}
+	
+	.close {
+		font-size: 20px;
+		position: fixed;
+		right: 20px;
+		top: 20px;
+		z-index: 2;
+	}
+	
+	.green,
+	.red {
+		font-size: 25px;
+		font-weight: bold;
+	}
+	
+	.green {
+		color: green;
+	}
+	
+	.red {
+		color: red;
+	}
+	

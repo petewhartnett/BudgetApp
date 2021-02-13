@@ -12,6 +12,10 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+	
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="./myChart.js"></script>
 	</head>
 	<body class="is-preload">
 		<div id="page-wrapper">
@@ -59,7 +63,7 @@
 				<section id="banner">
 					<header>
 						<h2>Budget App: <em>The ticket to your financial freedom </em></h2>
-						<a href="#" class="button">Learn More</a>
+						<a href="#tag"  class="button" >Start Now</a>
 					</header>
 				</section>
 
@@ -96,67 +100,38 @@
 				<section class="wrapper style2">
 					<div class="container">
 						<header class="major">
-							<h2>What are you waiting for, get Started Now!</h2>
-							<p>Select one of the budget tracking options below</p>
+							<h2 id = "tag">What are you waiting for, get Started Now!</h2>
 						</header>
 					</div>
 				</section>
 
 			<!-- Posts -->
-				<section class="wrapper style1">
-					<div class="container">
-						<div class="row">
-							<section class="col-6 col-12-narrower">
-								<div class="box post">
-									<a href="#" class="image left"><img src="images/pic01.jpg" alt="" /></a>
-									<div class="inner">
-										<h3>Link to first budget helper</h3>
-										<p>This could be a link or actual spot for the budget tool. </p>
-									</div>
-								</div>
-							</section>
-							<section class="col-6 col-12-narrower">
-								<div class="box post">
-									<a href="#" class="image left"><img src="images/pic02.jpg" alt="" /></a>
-									<div class="inner">
-										<h3>Link to second budget helper</h3>
-										<p>Text about budget tool here</p>
-									</div>
-								</div>
-							</section>
-						</div>
-						<div class="row">
-							<section class="col-6 col-12-narrower">
-								<div class="box post">
-									<a href="#" class="image left"><img src="images/pic03.jpg" alt="" /></a>
-									<div class="inner">
-										<h3>Link to third budget helper</h3>
-										<p>Text Here</p>
-									</div>
-								</div>
-							</section>
-							<section class="col-6 col-12-narrower">
-								<div class="box post">
-									<a href="#" class="image left"><img src="images/pic04.jpg" alt="" /></a>
-									<div class="inner">
-										<h3>The fourth budget tracker helper</h3>
-										<p>Text Here</p>
-									</div>
-								</div>
-							</section>
-						</div>
+				
+        <center>
+			  <div>
+				<a href="#/" class="start">Start budget calculator</a>
+				<div class="income">
+					<h3>Please enter your total income</h3>
+					<div class="additional-income">
+						
+						<input type="text" placeholder="Example - 1000" />
 					</div>
-				</section>
-
-			<!-- CTA -->
-				<section id="cta" class="wrapper style3">
-					<div class="container">
-						<header>
-							<h2>Check out the budget blog!</h2>
-							<a href="#" class="button">Enter Here</a>
-						</header>
+				</div>
+				<div class="costs">
+					<h3>Please enter your monthly debts</h3>
+					<div class="additional-costs">
 					</div>
-				</section>
+					<a href="#/" class="add-cost">Add cost</a>
+			
+					<a href="#/" class="calculate">Calculate total</a>
+				</div>
+				<div class="total"></div>
+			</div>
+			
+				<div class="container-chart">
+					<canvas id="createChart"></canvas>
+				</div>
+		</center>
 
 			<!-- Footer -->
 				<div id="footer">
@@ -229,6 +204,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/calculator.js"></script>
 
 	</body>
 </html>
