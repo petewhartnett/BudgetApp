@@ -47,6 +47,12 @@ $(".start").click(function() {
     return false;
 });
 
+$(".logout").click(function() {
+    alert("Thank for coming, happy savings!")
+    window.location = "index.html"
+    return false;
+});
+
 $('.add-cost').click(function() {
     costObj.append('<br/>' + inputObj );
     addClassesAndText("cost");
