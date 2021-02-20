@@ -75,25 +75,47 @@ $('.add-income').click(function() {
     return false;
 });
 
+function calculateSavings(totalIncome, totalCosts) {
+    var savings = totalIncome - totalCosts;
+    return savings;
+}
+
+function calculateTotalIncome(income, addedIncome){
+   income = income + addedIncome;
+   return income; 
+}
+
+function calculateTotalCosts(costs, addedCosts){
+    costs = costs + addedCosts;
+    return costs; 
+ }
+
 $(".calculate").click(function() {
     var totalIncome = 0;
     var totalCosts = 0;
-    
 
     $('.additional-income').children("input").each(function() {
         if ($(this).val() != "") {
-            totalIncome = totalIncome + parseInt($(this).val());
+          totalIncome = calculateTotalIncome(totalIncome, parseInt($(this).val()));
         }
     });
+
     $('.additional-costs').children("input.default").each(function() {
         if ($(this).val() != "") {
-            totalCosts = totalCosts + parseInt($(this).val());
+           totalCosts = calculateTotalCosts(totalCosts, parseInt($(this).val()));
         }
     });
-        var savings = totalIncome - totalCosts;
+
+        savings = calculateSavings(totalIncome, totalCosts);
         data = [totalCosts, totalIncome, savings, 0];
         labels =  ["Debt = $" + totalCosts, "Income = $" + totalIncome, "Savings = $" + savings];
         createChart(data, labels);
     
     
 });
+
+module.exports = {
+    calculateSavings,
+    calculateTotalIncome,
+    calculateTotalCosts
+};
